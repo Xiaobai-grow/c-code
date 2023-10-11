@@ -1,0 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main()
+{
+	int a, b;
+	a = 10;
+	b = 20;
+	a = a ^ b;//要理解“ ^ ”操作符的意思
+	b = a ^ b;
+	a = a ^ b;
+	printf("%d\n%d", a, b);
+	return 0;
+}
