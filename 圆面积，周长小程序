@@ -1,0 +1,60 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#define PI 3.1415926
+void menu()
+{
+    printf("****圆几何求解程序****\n");
+    printf("****请输入：>*********\n");
+    printf("****1.进入程序********\n");
+    printf("****0.退出程序********\n");
+}
+void caozou(int a)
+{
+    int b = 0;
+    double r = 0;
+    double ret = 0;
+    while (a)
+    {
+        if (a == 1)
+        {
+            printf("请选择1.求面积，2.求周长.\n");
+            scanf("%d", &b);
+            if (b == 1)
+            {
+                printf("请输入半径:>\n");
+                scanf("%lf", &r);
+                ret = r * r * PI;
+                printf("圆的面积是%lf", ret);
+                break;
+            }
+            else if (b == 2)
+            {
+                printf("请输入半径:>\n");
+                scanf("%lf", &r);
+                ret = 2 * r * PI;
+                printf("圆的周长是%lf", ret);
+                break;
+            }
+            else
+                printf("选择错误，请重新选择\n");
+        }
+        else if (a == 0)
+        {
+            a == 0;
+        }
+        else
+        {
+            printf("选择错误，请重新打开程序\n");
+            break;
+        }
+    }
+        
+}
+int main()
+{
+    int a = 0;
+    menu();
+    scanf("%d",&a);
+    caozou(a);
+       return 0;
+}
