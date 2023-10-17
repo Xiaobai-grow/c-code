@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+	int a, b, c;
+	printf("请分别输入成绩：>\n");
+	scanf("%d%d%d", &a, &b, &c);
+	if (a >= 0 && b >= 0 && c >= 0)
+	{
+		if (a <= 100 && b <= 100 && c <= 100)
+			printf("scorel=%d,scorel2=%d,scorel3=%d\n", a, b, c);
+		
+		else		
+			printf("请重新输入");
+		
+	}
+	else
+		printf("请重新输入");		
+	return 0;
+}
