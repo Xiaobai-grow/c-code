@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main()
+{
+int foot,inch;
+double m,z,cm;
+printf("请输入一个正整数厘米\n");
+scanf("%lf",&cm);
+m = cm/100;
+z = m/0.3048;
+printf("%lf %lf\n",m,z);
+foot = (int)z;
+if(z-(int)z>=0.5)
+    inch =(z-(int)z+0.1)*10;
+else
+    inch=(z-(int)z)*10;
+    printf("%d %d",foot,inch);
+    return 0;
+}
