@@ -1,0 +1,14 @@
+#include <stdio.h>
+struct stu 
+{
+    long number;
+    float score1;
+    float score2;
+    float score3;
+}stu1;
+
+int main() 
+{
+    scanf("%d%f%f%f", &stu1.number, &stu1.score1, &stu1.score2, &stu1.score3);
+    printf("The each subject score of No. %ld is %.2f, %.2f, %.2f.", stu1.number, stu1.score1, stu1.score2, stu1.score3);
+}
