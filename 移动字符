@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    char original[51]; // 原文字符串（最多50个字符）
+    int n; // 位移数
+    scanf("%s", original);
+    scanf("%d", &n);
+
+    int i = 0;
+    while (original[i] != '\0') 
+{
+        // 计算每个字符移动后的ASCII值
+        int shifted_ascii = (original[i] - 'a' + n) % 26 + 'a';
+        // 将移动后的字符打印出来
+        printf("%c", shifted_ascii);
+        i++;
+    }
+}
