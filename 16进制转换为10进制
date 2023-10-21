@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main()
+{
+	int a = 0xABCDEF;//输入一个16进制
+	printf("%15d\n", a);//将16进制转换为10进制并控制输出宽度为15
+	return 0;
+}
