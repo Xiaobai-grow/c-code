@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main()
+{
+	int a = 1234;
+	printf("%#o,%0X", a, a);//“#”格式转换符，将十进制分别转换为八进制和十六进制
+	return 0;
+}
