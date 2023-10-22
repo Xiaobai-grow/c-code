@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char arr[100] = { 0 };//用数组输入一段数字
+	int a;
+	scanf("%s", &arr);
+	a = strlen(arr) - 2;//减去二代表改段数字十位数
+	printf("%c\n", arr[a]);//打印十位数
+	return 0;
+}
