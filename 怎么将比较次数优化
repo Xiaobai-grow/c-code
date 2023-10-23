@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    double n;
+    scanf("%lf", &n);
+    double maxx = 0, minn = 1e9, average = 0, sum = 0;//根据题目给的范围给定一个较大的min值
+    for (int i = 0; i < n; ++i)
+    {
+        double x;
+        scanf("%lf", &x);//每输入一次就进行一次判断和加和....如果按照判断语句来写将会大大增加工作量
+        if (x > maxx)maxx = x;
+        if (x < minn)minn = x;
+        sum += x;
+    }
+    average = sum / n;
+    printf("%.2f %.2f %.2f", maxx, minn, average);
+    return 0;
+}
