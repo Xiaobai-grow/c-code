@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int temp = 0;
+    char crr;//输入字母的变量
+    char vowel[10] = { 'a','A','e','E','i','I','o','O','u','U' };//定义一个数组存放元音字母
+    while (scanf("%c", &crr) != EOF)
+    {
+        if (crr != '\n')//因为回车键被读入为“\n”
+        {
+            for (temp = 0; temp < 10; temp++)//循环10次判断元音字母
+            {
+                if (crr == vowel[temp])
+                {
+                    printf("Vowel\n");
+                    temp = 20;//如果执行此条语句是为了跳过下面的if语句
+                }
+            }
+                if (temp == 10)
+               {
+                printf("Consonant\n");//10次判断不是元音就是辅音
+                 }
+        }
+    }
+    return 0;
+}
