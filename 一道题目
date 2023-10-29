@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    int data = 0;                       //输入一个天数
+    int sum = 0;                        //拿来接受每天金币的总数
+    int k = 1;                          //
+    scanf("%d", &data);
+    if (data == 1)
+        printf("%d\n", sum + 1);
+    else
+    {
+        for (int i = 1; k <= data; i++)      //控制天数
+        {
+            for (int j = 0; j < i; j++)     //控制相同金币天数的累加
+            {
+                if (k > data)               //防止输入的数据为负数
+                    break;
+                sum += i;
+                k++;                        //当k大于data跳出循环
+            }
+        }
+        printf("%d\n", sum);
+    }
+    return 0;
+}
